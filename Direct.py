@@ -13,7 +13,7 @@ import concurrent.futures
 # ==== Load YOLO model ====
 device = 'cuda' if torch.cuda.is_available() else 'cpu'
 print(f"🚀 Using device: {device}")
-model = YOLO(r"D:\Final_python_poc\modifiedwith1d.pt").to(device)
+model = YOLO(r"modifiedwith1d.pt").to(device)
 _ = model(torch.zeros(1, 3, 416, 416))
 torch.set_grad_enabled(False)
 
